@@ -1,0 +1,92 @@
+<div>
+    <body>
+        <h1>Facebook</h1>
+        <h2>Users</h2>
+        <div>
+            <ul>
+                {{#each users}}
+                <li>
+                    ID: {{id}} Name: {{name}}
+                    <br>
+                    Gender: {{gender}}
+                    <br>
+                    Age: {{age}}
+                    <br>
+                    Friends:
+                    <div>
+                        <ul>
+                            {{#each friends}}
+                            <li>
+                                ID: {{id}} Name: {{name}}
+                                <br>
+                                Gender: {{gender}}
+                                <br>
+                                Age: {{age}}
+                                <br>
+                                Mutual friends:
+                                <div>
+                                    <ul>
+                                        {{#each mutual_friends}}
+                                        <li>
+                                            ID: {{id}} Name: {{name}}
+                                            <br>
+                                            Gender: {{gender}}
+                                            <br>
+                                            Age: {{age}}
+                                            <br>
+                                            Mutual friends:
+                                            <div>
+                                                <ul>
+                                                    {{#each mutual_friends}}
+                                                    <li>
+                                                        ID: {{id}} Name: {{name}}
+                                                        <br>
+                                                        Gender: {{gender}}
+                                                        <br>
+                                                        Age: {{age}}
+                                                    </li>
+                                                    {{/each}}
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    <hr>
+                    Groups:
+                    <div>
+                        <ul>
+                            {{#each groups}}
+                            <li>
+                                ID: {{id}} Name: {{name}}
+                                <br>
+                                Description: {{description}}
+                                <br>
+                                Members: 
+                                <div>
+                                    <ul>
+                                        {{#each members}}
+                                        <li>
+                                            ID: {{id}} Name: {{name}}
+                                            <br>
+                                            Gender: {{gender}}
+                                            <br>
+                                            Age: {{age}}
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </body>
+</div>
